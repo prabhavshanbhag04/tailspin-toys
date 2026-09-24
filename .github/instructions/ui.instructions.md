@@ -20,6 +20,13 @@ Refer to technology-specific instruction files:
 
 ## Core Principles
 
+### Comments and component documentation
+
+- Comments must explain intent, constraints, or a non-obvious decision. Do not add comments that merely paraphrase the markup or expression beneath them.
+- Keep comments accurate as the component evolves; update or remove stale comments in the same change as the related code.
+- Every reusable `.astro` component must define and document its `Props` interface. Describe what each prop controls, whether it is required, and any meaningful default or rendering behavior.
+- Prefer a short TSDoc comment immediately above the `Props` interface. Use the interface's property names and types as the source of truth rather than duplicating the contract elsewhere.
+
 ### Testability
 
 - Every interactive element MUST include a `data-testid` attribute
